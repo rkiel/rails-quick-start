@@ -6,10 +6,10 @@ require 'rails/quick/start/version'
 Gem::Specification.new do |spec|
   spec.name          = "rails-quick-start"
   spec.version       = Rails::Quick::Start::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.authors       = ["RKiel"]
+  spec.email         = ["cygnus@pobox.com"]
+  spec.description   = %q{Quickly start a Rails app}
+  spec.summary       = %q{Quickly start a Rails app}
   spec.homepage      = ""
   spec.license       = "MIT"
 
