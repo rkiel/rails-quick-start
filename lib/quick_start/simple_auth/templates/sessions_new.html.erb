@@ -1,0 +1,38 @@
+
+<style>
+  div#login {
+    text-align: center;
+  }
+
+  #submit {
+    margin-top: 25px;
+  }
+  .input_field {
+    margin:0 auto;
+    width: 200px;
+    text-align: left;
+  }
+
+</style>
+
+<div id="login">
+
+  <%= form_tag sessions_path do %>
+
+    <div class="input_field">
+      <p><%= label_tag :email, "Email" %></p>
+      <p><%= text_field_tag :email, params[:email] %></p>
+    </div>
+
+    <div class="input_field">
+      <p><%= label_tag :password, "Password" %></p>
+      <p><%= password_field_tag :password %></p>
+    </div>
+
+    <%= submit_tag "Login", :id => 'submit' %>
+
+  <% end %>
+
+</div>
+
+

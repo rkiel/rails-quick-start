@@ -1,0 +1,63 @@
+
+<style>
+  div#login {
+    text-align: center;
+  }
+
+  #submit {
+    margin-top: 25px;
+  }
+  .input_field {
+    margin:0 auto;
+    width: 200px;
+    text-align: left;
+  }
+
+</style>
+
+<div id="login">
+
+  <%= form_for @user do |form| %>
+
+     <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="input_field">
+      <p><%= form.label :first_name, "First Name" %></p>
+      <p><%= form.text_field :first_name %></p>
+    </div>
+
+    <div class="input_field">
+      <p><%= form.label :last_name, "Last Name" %></p>
+      <p><%= form.text_field :last_name %></p>
+    </div>
+
+    <div class="input_field">
+      <p><%= form.label :email, "Email" %></p>
+      <p><%= form.text_field :email %></p>
+    </div>
+
+    <div class="input_field">
+      <p><%= form.label :password, "Password" %></p>
+      <p><%= form.password_field :password %></p>
+    </div>
+
+    <div class="input_field">
+      <p><%= form.label :password_confirmation, "Password (again)" %></p>
+      <p><%= form.password_field :password_confirmation %></p>
+    </div>
+
+    <%= submit_tag "Create", :id => 'submit' %>
+
+  <% end %>
+
+</div>
+
