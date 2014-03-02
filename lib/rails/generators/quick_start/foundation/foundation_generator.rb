@@ -3,7 +3,7 @@ module QuickStart
     source_root File.expand_path('../templates', __FILE__)
 
     def add_gem_files
-      gem 'foundation-rails', version: '~> 5.0.2'
+      gem 'foundation-rails', version: '~> 5.1.1.0'
     end
 
     def update_application_assets
